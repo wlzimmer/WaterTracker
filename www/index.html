@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,  target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" href="lib/jquery-mobile/css/jquery.mobile-1.4.0.min.css" />
+	
+	<script type="text/javascript" src="lib/jquery-mobile/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-mobile-router/js/jquery.mobile.router.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-mobile/js/jquery.mobile-1.4.0.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+        <title>Water Tracker</title>
+    </head>
+    <body>
+ 	<section id="home" data-role="page">
+          <header data-role="header" data-position="fixed" data-theme="b">
+            <h1 id=deviceUUID>Water Tracker</h1>
+          </header>
+            <div id="mainPage">
+                <ul id="deviceList">                    
+                </ul>
+                <button id="refreshButton">Refresh</button>
+            </div>
+            <div id="detailPage" class="content" data-role="content" style="padding:20px;font-size:120%">
+            <table style="text-align: left;">
+              <tr><td>Humidity</td><td style="text-align: right;width:75px;"><span id="data0"></span></td><td style="padding-left:20px;">% H</td></tr>
+              <tr><td>Temp</td><td style="text-align: right;width:75px;"><span id="data1"></span></td></td><td style="padding-left:20px;">Deg C</td></tr>
+              <tr><td>Moisture</td><td style="text-align: right;width:75px;"><span id="data2"></span></td></td><td style="padding-left:20px;">0 - 100</td></tr>
+              <tr><td>Light</td><td style="text-align: right;width:75px;"><span id="data3"></span></td><td style="padding-left:20px;"> 0 - 100 </td></tr>
+            </table>
+                <button id="closeButton">Close</button>
+            </div>            
+	  <footer data-role="footer" data-position="fixed" data-theme="b">
+	    <h1>Water Tracker Beta 1.1</h1>
+	  </footer>
+      </section>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

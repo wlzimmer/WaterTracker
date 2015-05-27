@@ -1,0 +1,14 @@
+{
+    "com.megster.cordova.rfduino": {
+        "source": {
+            "type": "registry",
+            "id": "com.megster.cordova.rfduino"
+        }
+    },
+    "org.apache.cordova.statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.statusbar"
+        }
+    }
+}
