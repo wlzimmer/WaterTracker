@@ -100,3 +100,87 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-28 14:35:13.412 Water Tracker[2099:35184] Resetting plugins due to page load.
 2015-05-28 14:35:13.653 Water Tracker[2099:35184] Finished load of: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Bundle/Application/240D9304-1C2B-4235-84B1-C1993D0199F3/Water%20Tracker.app/www/index.html
 2015-05-28 14:35:18.667 Water Tracker[2099:35184] stopScanTimer
+2015-06-02 08:20:16.941 Water Tracker[4438:200202] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Data/Application/F10F6155-6C4B-474D-98E6-A50BAD96F1B0/Library/Cookies/Cookies.binarycookies
+2015-06-02 08:20:17.567 Water Tracker[4438:200202] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-02 08:20:17.567 Water Tracker[4438:200202] Multi-tasking -> Device: YES, App: YES
+2015-06-02 08:20:17.598 Water Tracker[4438:200202] Unlimited access to network resources
+2015-06-02 08:20:17.634 Water Tracker[4438:200202] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-02 08:20:18.341 Water Tracker[4438:200202] RFduino Cordova Plugin
+2015-06-02 08:20:18.341 Water Tracker[4438:200202] (c)2013-2015 Don Coleman
+2015-06-02 08:20:18.364 Water Tracker[4438:200202] [CDVTimer][rfduino] 23.140013ms
+2015-06-02 08:20:18.612 Water Tracker[4438:200202] [CDVTimer][statusbar] 248.158038ms
+2015-06-02 08:20:18.613 Water Tracker[4438:200202] [CDVTimer][TotalPluginStartup] 271.699011ms
+2015-06-02 08:20:18.683 Water Tracker[4438:200202] Status of CoreBluetooth central manager changed 2 State BLE unsupported (CBCentralManagerStateResetting)
+2015-06-02 08:20:18.955 Water Tracker[4438:200202] Resetting plugins due to page load.
+2015-06-02 08:20:19.472 Water Tracker[4438:200202] Finished load of: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Bundle/Application/02DBC065-CBC1-41B8-A34E-C38651BF350A/Water%20Tracker.app/www/index.html
+2015-06-02 08:20:24.498 Water Tracker[4438:200202] stopScanTimer
+2015-06-02 08:22:45.829 Water Tracker[4744:201528] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Data/Application/F7E2C6F3-D6AF-4A2F-A03E-6F602C87326B/Library/Cookies/Cookies.binarycookies
+2015-06-02 08:22:45.964 Water Tracker[4744:201528] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-02 08:22:45.964 Water Tracker[4744:201528] Multi-tasking -> Device: YES, App: YES
+2015-06-02 08:22:45.975 Water Tracker[4744:201528] Unlimited access to network resources
+2015-06-02 08:22:45.977 Water Tracker[4744:201528] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-02 08:22:46.080 Water Tracker[4744:201528] RFduino Cordova Plugin
+2015-06-02 08:22:46.080 Water Tracker[4744:201528] (c)2013-2015 Don Coleman
+2015-06-02 08:22:46.082 Water Tracker[4744:201528] [CDVTimer][rfduino] 2.097964ms
+2015-06-02 08:22:46.099 Water Tracker[4744:201528] [CDVTimer][statusbar] 16.050994ms
+2015-06-02 08:22:46.099 Water Tracker[4744:201528] [CDVTimer][TotalPluginStartup] 18.579006ms
+2015-06-02 08:22:46.145 Water Tracker[4744:201528] Status of CoreBluetooth central manager changed 2 State BLE unsupported (CBCentralManagerStateResetting)
+2015-06-02 08:22:46.187 Water Tracker[4744:201528] Resetting plugins due to page load.
+2015-06-02 08:22:46.394 Water Tracker[4744:201528] Finished load of: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Bundle/Application/02A71ADB-31F1-4C0A-A4B5-F632ECE2F45C/Water%20Tracker.app/www/index.html
+2015-06-02 08:22:51.413 Water Tracker[4744:201528] stopScanTimer
+2015-06-02 08:24:04.216 Water Tracker[5038:202468] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Data/Application/9DCFFAED-3173-4ADB-BF2F-31BA06DAB0C8/Library/Cookies/Cookies.binarycookies
+2015-06-02 08:24:04.365 Water Tracker[5038:202468] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-02 08:24:04.366 Water Tracker[5038:202468] Multi-tasking -> Device: YES, App: YES
+2015-06-02 08:24:04.376 Water Tracker[5038:202468] Unlimited access to network resources
+2015-06-02 08:24:04.380 Water Tracker[5038:202468] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-02 08:24:04.486 Water Tracker[5038:202468] RFduino Cordova Plugin
+2015-06-02 08:24:04.486 Water Tracker[5038:202468] (c)2013-2015 Don Coleman
+2015-06-02 08:24:04.488 Water Tracker[5038:202468] [CDVTimer][rfduino] 1.878977ms
+2015-06-02 08:24:04.504 Water Tracker[5038:202468] [CDVTimer][statusbar] 15.827000ms
+2015-06-02 08:24:04.504 Water Tracker[5038:202468] [CDVTimer][TotalPluginStartup] 18.130004ms
+2015-06-02 08:24:04.549 Water Tracker[5038:202468] Status of CoreBluetooth central manager changed 2 State BLE unsupported (CBCentralManagerStateResetting)
+2015-06-02 08:24:04.592 Water Tracker[5038:202468] Resetting plugins due to page load.
+2015-06-02 08:24:04.800 Water Tracker[5038:202468] Finished load of: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Bundle/Application/FEE4DE1E-88EE-4FEE-AAD3-62B064666369/Water%20Tracker.app/www/index.html
+2015-06-02 08:24:09.815 Water Tracker[5038:202468] stopScanTimer
+2015-06-02 08:38:22.945 Water Tracker[5510:206318] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Data/Application/FB05DDDB-33F3-4913-B143-4C5A21E00CB9/Library/Cookies/Cookies.binarycookies
+2015-06-02 08:38:23.040 Water Tracker[5510:206318] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-02 08:38:23.041 Water Tracker[5510:206318] Multi-tasking -> Device: YES, App: YES
+2015-06-02 08:38:23.130 Water Tracker[5510:206318] Unlimited access to network resources
+2015-06-02 08:38:23.134 Water Tracker[5510:206318] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-02 08:38:23.383 Water Tracker[5510:206318] RFduino Cordova Plugin
+2015-06-02 08:38:23.383 Water Tracker[5510:206318] (c)2013-2015 Don Coleman
+2015-06-02 08:38:23.385 Water Tracker[5510:206318] [CDVTimer][rfduino] 1.982033ms
+2015-06-02 08:38:23.400 Water Tracker[5510:206318] [CDVTimer][statusbar] 14.069974ms
+2015-06-02 08:38:23.400 Water Tracker[5510:206318] [CDVTimer][TotalPluginStartup] 16.444027ms
+2015-06-02 08:38:23.416 Water Tracker[5510:206318] Status of CoreBluetooth central manager changed 2 State BLE unsupported (CBCentralManagerStateResetting)
+2015-06-02 08:38:23.468 Water Tracker[5510:206318] Resetting plugins due to page load.
+2015-06-02 08:38:23.791 Water Tracker[5510:206318] Finished load of: file:///Users/bill/Library/Developer/CoreSimulator/Devices/61BA00DD-A53A-434B-9611-C1259B11ABC8/data/Containers/Bundle/Application/2893AD2B-E3E7-45AF-A60F-3F4EB84617CE/Water%20Tracker.app/www/index.html
+2015-06-02 08:38:28.805 Water Tracker[5510:206318] stopScanTimer

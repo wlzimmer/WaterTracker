@@ -1,4 +1,5 @@
-// (c) 2013 Don Coleman
+// (c) 2015 Bill Zimmer
+// for Concord Consortium
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -45,10 +46,14 @@ var app = {
         app.refreshDeviceList();
     },
     refreshDeviceList: function() {
+        $("#devicelist").hide();
+        $("#notfound").show();
         deviceList.innerHTML = ''; // empties the list
         rfduino.discover(5, app.onDiscoverDevice, app.onError);
     },
     onDiscoverDevice: function(device) {
+        $("#notfound").hide();
+        $("#devicelist").show();
         var listItem = document.createElement('li'),
             html = '<b>' + device.name + '</b><br/>' +
                 device.uuid;

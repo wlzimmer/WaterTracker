@@ -20,9 +20,12 @@
     <body>
  	<section id="home" data-role="page">
           <header data-role="header" data-position="fixed" data-theme="b">
-            <h1 id=deviceUUID>Water Tracker</h1>
+            <h1><div id="deviceUUID" style="line-height: 30px;vertical-align: bottom;">Water Tracker</div></h1>
           </header>
             <div id="mainPage">
+                <div id="notfound">
+                  No Tracker Found. <br> Check to see if it is turned on and within range.
+                </div>
                 <ul id="deviceList">                    
                 </ul>
                 <button id="refreshButton">Refresh</button>

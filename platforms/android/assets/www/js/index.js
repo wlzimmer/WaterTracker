@@ -45,10 +45,14 @@ var app = {
         app.refreshDeviceList();
     },
     refreshDeviceList: function() {
+        $("#devicelist").hide();
+        $("#notfound").show();
         deviceList.innerHTML = ''; // empties the list
         rfduino.discover(5, app.onDiscoverDevice, app.onError);
     },
     onDiscoverDevice: function(device) {
+        $("#notfound").hide();
+        $("#devicelist").show();
         var listItem = document.createElement('li'),
             html = '<b>' + device.name + '</b><br/>' +
                 device.uuid;
