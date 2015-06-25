@@ -1,4 +1,5 @@
-// (c) 2013 Don Coleman
+// (c) 2015 Bill Zimmer
+// for Concord Consortium
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,11 +18,11 @@
 /* global rfduino, alert */
 'use strict';
 /*
-var arrayBufferToFloat = function (ab) {
-    var a = new Uint16Array(ab);
-    return a[0];
-};
-*/
+ var arrayBufferToFloat = function (ab) {
+ var a = new Uint16Array(ab);
+ return a[0];
+ };
+ */
 var soilZero = 255.;
 var soilSlope = -1.4;
 // .4   --> 8    --> 60
@@ -29,69 +30,81 @@ var soilSlope = -1.4;
 
 var lightZero = 0.;
 var lightSlope = 25/100.;
+var devices = [];
 
 var app = {
-    initialize: function() {
-        this.bindEvents();
-        detailPage.hidden = true;
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-        refreshButton.addEventListener('touchstart', this.refreshDeviceList, false);
-        closeButton.addEventListener('touchstart', this.disconnect, false);
-        deviceList.addEventListener('touchstart', this.connect, false); // assume not scrolling
-    },
-    onDeviceReady: function() {
-        app.refreshDeviceList();
-    },
-    refreshDeviceList: function() {
-        $("#devicelist").hide();
-        $("#notfound").show();
-        deviceList.innerHTML = ''; // empties the list
-        rfduino.discover(5, app.onDiscoverDevice, app.onError);
-    },
-    onDiscoverDevice: function(device) {
-        $("#notfound").hide();
-        $("#devicelist").show();
-        var listItem = document.createElement('li'),
-            html = '<b>' + device.name + '</b><br/>' +
-                device.uuid;
-        listItem.setAttribute('uuid', device.uuid);
+initialize: function() {
+    this.bindEvents();
+    detailPage.hidden = true;
+},
+bindEvents: function() {
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+    refreshButton.addEventListener('touchstart', this.refreshDeviceList, false);
+    closeButton.addEventListener('touchstart', this.disconnect, false);
+},
+onDeviceReady: function() {
+    app.refreshDeviceList();
+},
+    
+refreshDeviceList: function() {
+    $("#deviceList").hide();
+    $("#notfound").show();
+    devices = []; // empties the list
+    rfduino.discover(5, app.onDiscoverDevice, app.onError);
+},
+    
+onDiscoverDevice: function(device) {
+    $("#notfound").hide();
+    $("#deviceList").show();
+    deviceList.innerHTML = '';
+    devices.push (device);
+    devices = devices.sort(function(a, b) {
+                           return (b.rssi - a.rssi);});
+    for (var idevice in devices) {
+        var listItem = document.createElement('li');
+        listItem.onclick = app.connect; // assume not scrolling
+        var html = '<b>' + devices[idevice].name + '</b>';
+        listItem.setAttribute('uuid', devices[idevice].uuid);
         listItem.innerHTML = html;
         deviceList.appendChild(listItem);
-    },
-    connect: function(e) {
-        var uuid = e.target.getAttribute('uuid'),
-            onConnect = function() {
-                rfduino.onData(app.onData, app.onError);
-                app.showDetailPage();
-                deviceUUID.innerHTML = uuid+"<br>";
-            };
-
-        rfduino.connect(uuid, onConnect, app.onError);
-    },
-    onData: function(data) {
-        console.log(data);
-        var a = new Uint16Array(data);
-//wlz.innerHTML = "Data=" + a[0];
-        if      (a[0] < 1024) {data0.innerHTML = a[0]/10.;}
-        else if (a[0] < 2048) {data1.innerHTML = (a[0]-1024);}
-        else if (a[0] < 3072) {data2.innerHTML = Math.max(0,Math.round((a[0]-2048-soilZero)/soilSlope));}
-        else                  {data3.innerHTML = Math.max(0,Math.round((a[0]-3072-lightZero)/lightSlope*10)/10);}
-    },
-    disconnect: function() {
-        deviceUUID.innerHTML = "Water Tracker";
-        rfduino.disconnect(app.showMainPage, app.onError);
-    },
-    showMainPage: function() {
-        mainPage.hidden = false;
-        detailPage.hidden = true;
-    },
-    showDetailPage: function() {
-        mainPage.hidden = true;
-        detailPage.hidden = false;
-    },
-    onError: function(reason) {
-        alert(reason); // real apps should use notification.alert
-    }
+    };
+},
+    
+connect: function(e) {
+    app.showDetailPage();
+    var uuid = this.getAttribute('uuid'),name=this.innerHTML,
+    onConnect = function() {
+        rfduino.onData(app.onData, app.onError);
+        deviceUUID.innerHTML = name;
+    };
+    deviceUUID.innerHTML = "Connecting";
+    data0.innerHTML = "";
+    data1.innerHTML = "";
+    data2.innerHTML = "";
+    data3.innerHTML = "";
+    rfduino.connect(uuid, onConnect);
+},
+onData: function(data) {
+    console.log(data);
+    var a = new Uint16Array(data);
+    if      (a[0] < 1024) {data0.innerHTML = a[0]/10.;}
+    else if (a[0] < 2048) {data1.innerHTML = (a[0]-1024);}
+    else if (a[0] < 3072) {data2.innerHTML = Math.max(0,Math.round((a[0]-2048-soilZero)/soilSlope));}
+    else                  {data3.innerHTML = Math.max(0,Math.round((a[0]-3072-lightZero)/lightSlope*10)/10);}
+},
+disconnect: function() {
+    deviceUUID.innerHTML = "Water Tracker";
+    rfduino.disconnect(app.showMainPage, app.onError);
+},
+showMainPage: function() {
+    mainPage.hidden = false;
+    detailPage.hidden = true;
+},
+showDetailPage: function() {
+    mainPage.hidden = true;
+    detailPage.hidden = false;
+},
+onError: function(reason) {
+    alert(reason);
+}
 };
