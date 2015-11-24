@@ -42,10 +42,10 @@
         }
     },
     "installed_plugins": {
-        "com.megster.cordova.rfduino": {
+        "cordova-plugin-rfduino": {
             "PACKAGE_NAME": "com.servertechnology.rfduinoSensor"
         },
-        "org.apache.cordova.statusbar": {
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.servertechnology.rfduinoSensor"
         }
     },
